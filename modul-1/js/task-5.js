@@ -12,7 +12,7 @@ const PRAISE_CHILE = 250;
 const PRAISE_AUSTRALIA = 170;
 const PRAISE_INDIA = 80;
 const PRAISE_JAMAICA = 120;
-const promLabel = 'Доставка: Китай, Ямайка, Чили, Австралия, Индия';
+const promLabel = 'Введите страну  доставки:';
 
 let userChoise = prompt(promLabel);
 const inLowerCase = userChoise.toLowerCase();
@@ -26,28 +26,29 @@ let message;
 if (userChoise === null) {
   message = 'Очень жаль';
 } else {
-  //   userChoise = Number(userChoise);
   switch (userChoise) {
     case CHINA:
-      message =
-        'Доставка едит в ' +
-        CHINA +
-        'стщимость доставки' +
-        PRAISE_CHINA +
-        'кредитов';
+      message = `Доставка едит в ${CHINA} стоимость доставки ${PRAISE_CHINA}  кредитов`;
       break;
 
     case JAMAICA:
-      message =
-        'Доставка едит в ' +
-        JAMAIKA +
-        'стщимость доставки' +
-        PRAISE_JAMAICA +
-        'кредитов';
+      message = `Доставка едит в ${JAMAICA} стоимость доставки ${PRAISE_JAMAICA}  кредитов`;
+
       break;
 
     case AUSTRALIA:
-      message = 'Доставка едит в Австралия';
+      message = `Доставка едит в ${AUSTRALIA} стоимость доставки ${PRAISE_AUSTRALIA}  кредитов`;
+
+      break;
+
+    case CHILE:
+      message = `Доставка едит в ${CHILE} стоимость доставки ${PRAISE_CHILE}  кредитов`;
+
+      break;
+
+    case INDIA:
+      message = `Доставка едит в ${INDIA} стоимость доставки ${PRAISE_INDIA}  кредитов`;
+
       break;
 
     default:
